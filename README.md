@@ -9,7 +9,7 @@ https://limhoooo-youtube.netlify.app/<br/>
 ## 사용기술
 
 - React (18v) <br>
-- nuxt.js
+- next.js
 - styled-componenet<br>
 - Netlify <br>
  
