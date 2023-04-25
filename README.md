@@ -11,8 +11,8 @@ https://limhoooo-youtube.netlify.app/<br/>
 - React (18v) <br>
 - next.js
 - styled-componenet<br>
+- gsap<br>
 - Netlify <br>
- 
 
 ## 기존 스타벅스 퍼블리싱 사이트
 
