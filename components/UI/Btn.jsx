@@ -14,9 +14,9 @@ export const Btn = styled.div`
   transition: 0.4s;
 
   color: ${({ color }) => color || '#333'};
-  border-color: ${({ borderColor }) => borderColor || '#333'};
+  border-color: ${({ color }) => color || '#333'};
   :hover {
     color: #fff;
-    background-color: ${({ borderColor }) => borderColor || '#333'};
+    background-color: ${({ color }) => color || '#333'};
   }
 `

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Search from './../Search'
+import Search from './Search'
 const SubMenuContainer = styled.div`
   position: absolute;
   top: 10px;

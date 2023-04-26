@@ -1,11 +1,11 @@
 import React, { useRef } from 'react'
 import styled from 'styled-components'
-import { Inner } from '../Inner'
-import { Btn } from '../Btn'
+import { Inner } from '../UI/Inner'
+import { Btn } from '../UI/Btn'
 import Image from 'next/image'
 import { useEffect } from 'react'
 import gsap from 'gsap'
-import { PositionAbsolute } from '../PositionAbsolute'
+import { PositionAbsolute } from '../UI/PositionAbsolute'
 
 const VisualContainer = styled.section`
   margin-top: 120px;
@@ -40,7 +40,7 @@ export default function Visual() {
               height={231}
             />
             <PositionAbsolute top={'259px'} left={'173px'}>
-              <Btn color={'#592B18'} borderColor={'#592B18'}>
+              <Btn color={'#592B18'}>
                 <a>자세히 보기</a>
               </Btn>
             </PositionAbsolute>

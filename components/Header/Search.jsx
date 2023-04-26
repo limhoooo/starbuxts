@@ -35,7 +35,7 @@ const SearchIcon = styled.label.attrs({
   bottom: 2px;
   margin: auto;
   transition: 0.4s;
-  opacity: ${(props) => (props.isClick ? '0' : '1')};
+  opacity: ${({ isClick }) => (isClick ? '0' : '1')};
   cursor: pointer;
 `
 export default function Search() {

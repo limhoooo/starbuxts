@@ -1,9 +1,10 @@
 import React from 'react'
-import { Inner } from '../Inner'
+import { Inner } from '../UI/Inner'
 import Logo from './Logo'
 import SubMenu from './SubMenu'
 import styled from 'styled-components'
 import MainMenu from './MainMenu'
+import Badges from './Badges'
 
 const HeaderContainer = styled.div`
   background-color: #f6f5f0;
@@ -13,23 +14,15 @@ const HeaderContainer = styled.div`
   top: 0;
   z-index: 11;
 `
-export default function Header() {
+export default function Header({ headerInfo }) {
   return (
     <HeaderContainer>
       <Inner height={'120px'}>
         <Logo />
         <SubMenu />
-        <MainMenu />
+        <MainMenu headerInfo={headerInfo} />
       </Inner>
-
-      {/* <div class="badges">
-        <div class="badge">
-          <img src="./images/badge1.jpg" alt="Badge" />
-        </div>
-        <div class="badge">
-          <img src="./images/badge2.jpg" alt="Badge" />
-        </div>
-      </div> */}
+      <Badges />
     </HeaderContainer>
   )
 }
