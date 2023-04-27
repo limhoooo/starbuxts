@@ -16,6 +16,7 @@ https://limhoooo-starbuxts.netlify.app<br/>
 - lodash<br>
 - Material Icons<br>
 - Gsap<br>
+- react-youtube<br>
 - Netlify <br>
 
 ## 기존 스타벅스 퍼블리싱 사이트

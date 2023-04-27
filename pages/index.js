@@ -1,10 +1,9 @@
-import styled from 'styled-components'
+import { getHaeder } from '../lib/data'
 import Header from '../components/Header'
 import Visual from '../components/Visual'
 import Notice from '../components/Notice'
-import { getHaeder } from '../lib/data'
-import TestSw from '../components/TestSw'
 import Rewards from '../components/Rewards'
+import Youtube from '../components/Youtube'
 
 export default function Home({ headerInfo }) {
   return (
@@ -12,8 +11,9 @@ export default function Home({ headerInfo }) {
       <Header headerInfo={headerInfo} />
       <Visual />
       <Notice />
-      {/* <TestSw /> */}
       <Rewards />
+      <Youtube />
+      {/* <TestSw /> */}
     </>
   )
 }
