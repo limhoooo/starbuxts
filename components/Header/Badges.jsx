@@ -24,7 +24,7 @@ export default function Badges() {
 
   const handleScroll = useCallback(
     _.throttle(() => {
-      setIsBadge(window.pageYOffset > 100 ? false : true)
+      setIsBadge(window.pageYOffset > 300 ? false : true)
     }, 300),
     [setIsBadge]
   )
