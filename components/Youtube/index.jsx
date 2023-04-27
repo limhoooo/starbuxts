@@ -40,18 +40,11 @@ const Floating = styled.div`
   top: ${({ top }) => `${top}px` || '0px'};
   left: ${({ left }) => `${left}px` || '0px'};
 `
-const VideoPlayerStyled = styled(VideoPlayer)`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-`
 export default function YoutubeComponent() {
   return (
     <YoutubeContainer>
       <YoutubeArea>
-        <VideoPlayerStyled />
+        <VideoPlayer />
       </YoutubeArea>
       <YoutubeCover />
       <Inner height={700}>

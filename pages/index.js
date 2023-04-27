@@ -4,6 +4,13 @@ import Visual from '../components/Visual'
 import Notice from '../components/Notice'
 import Rewards from '../components/Rewards'
 import Youtube from '../components/Youtube'
+import SeasonProject from '../components/SeasonProject'
+import ReserveCoffee from '../components/ReserveCoffee'
+import Favorite from '../components/Favorite'
+import ReserveStore from '../components/ReserveStore'
+import FindStore from '../components/FindStore'
+import Awards from '../components/Awards'
+import Footer from '../components/Footer'
 
 export default function Home({ headerInfo }) {
   return (
@@ -13,7 +20,13 @@ export default function Home({ headerInfo }) {
       <Notice />
       <Rewards />
       <Youtube />
-      {/* <TestSw /> */}
+      <SeasonProject />
+      <ReserveCoffee />
+      <Favorite />
+      <ReserveStore />
+      <FindStore />
+      <Awards />
+      <Footer />
     </>
   )
 }
