@@ -10,13 +10,12 @@ https://limhoooo-starbuxts.netlify.app<br/>
 ## 사용기술
 
 - React (18v) <br>
-- next.js
-- styled-componenet<br>
-- gsap<br>
-- lodash<br>
-- Material Icons<br>
+- Next.js
+- Styled-componenet<br>
 - Gsap<br>
-- react-youtube<br>
+- Lodash<br>
+- Material Icons<br>
+- React-youtube<br>
 - Netlify <br>
 
 ## 기존 스타벅스 퍼블리싱 사이트
