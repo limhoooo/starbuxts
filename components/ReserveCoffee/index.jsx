@@ -38,7 +38,6 @@ export default function ReserveCoffee() {
           <Image
             src="/images/reserve_text.png"
             alt="reserve_text"
-            class="description back-to-possition to-right delay-1"
             width={450}
             height={120}
           />

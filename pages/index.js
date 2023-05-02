@@ -11,6 +11,7 @@ import ReserveStore from '../components/ReserveStore'
 import FindStore from '../components/FindStore'
 import Awards from '../components/Awards'
 import Footer from '../components/Footer'
+import Test from '../components/Test'
 
 export default function Home({ headerInfo }) {
   return (
@@ -26,6 +27,7 @@ export default function Home({ headerInfo }) {
       <ReserveStore />
       <FindStore />
       <Awards />
+      <Test />
       <Footer />
     </>
   )

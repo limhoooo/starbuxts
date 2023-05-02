@@ -1,17 +1,26 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import styled from 'styled-components'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import { FreeMode, Pagination, Navigation } from 'swiper'
+import Image from 'next/image'
+import { Btn } from '../UI/Btn'
+import { SvgIcon } from '@mui/material'
 
 const PromotionContainer = styled.div`
   height: ${({ isToggle }) => (isToggle ? '0px' : '693px')};
   background-color: #f6f5ef;
   position: relative;
-  overflow: hidden;
   transition: all 0.4s;
   overflow: hidden;
-  .swiper-container {
+  .swiper {
     width: calc(819px * 3 + 20px);
-    height: 553px;
+    height: 553px !important;
     position: absolute;
     top: 40px;
     left: 50%;
@@ -33,7 +42,7 @@ const PromotionContainer = styled.div`
     margin: 0 auto;
   }
   .swiper-pagination {
-    bottom: 40px;
+    bottom: -40px;
     left: 0;
     right: 0;
   }
@@ -74,10 +83,16 @@ const PromotionContainer = styled.div`
   .swiper-prev {
     left: 50%;
     margin-left: -480px;
+    .material-icons {
+      height: 25px;
+    }
   }
   .swiper-next {
     right: 50%;
     margin-right: -480px;
+    .material-icons {
+      height: 25px;
+    }
   }
 
   .swiper-prev:hover,
@@ -88,66 +103,95 @@ const PromotionContainer = styled.div`
 `
 
 export default function Promotion({ isToggle }) {
+  const swiperRef = useRef()
+  const navigationPrevRef = useRef(null)
+  const navigationNextRef = useRef(null)
+  const paginationRef = useRef(null)
   return (
     <PromotionContainer isToggle={isToggle}>
       <Swiper
+        freeMode={true}
+        slidesPerView={3}
+        spaceBetween={30}
+        pagination={{
+          el: '.promotion .swiper-pagination',
+          clickable: true,
+        }}
+        centeredSlides={true}
         loop={true}
-        autoplay={{ delay: 3000 }} // 추가
+        navigation={{
+          prevEl: navigationPrevRef.current,
+          nextEl: navigationNextRef.current,
+        }}
+        onBeforeInit={(swiper) => {
+          swiperRef.current = swiper
+        }}
+        modules={[FreeMode, Pagination, Navigation]}
+        style={{ height: '100%' }}
       >
         <SwiperSlide>
-          <a>크리스마스 & 연말연시 스타벅스 매장 영업시간 변경 안내</a>
+          <Image
+            width={820}
+            height={525}
+            src="/images/promotion_slide1.jpg"
+            alt="이미지"
+          />
+          <Btn className="btn">자세히 보기</Btn>
         </SwiperSlide>
         <SwiperSlide>
-          <a>[당첨자 발표] 2022 스타벅스 플래너 영수증 이벤트</a>
+          <Image
+            width={820}
+            height={525}
+            src="/images/promotion_slide2.jpg"
+            alt="이미지"
+          />
+          <Btn className="btn">자세히 보기</Btn>
         </SwiperSlide>
         <SwiperSlide>
-          <a>스타벅스커피 코리아 애플리케이션 버전 업데이트</a>
+          <Image
+            width={820}
+            height={525}
+            src="/images/promotion_slide3.jpg"
+            alt="이미지"
+          />
+          <Btn className="btn">자세히 보기</Btn>
         </SwiperSlide>
         <SwiperSlide>
-          <a>[당첨자 발표] 뉴이어 전자영수증 이벤트</a>
+          <Image
+            width={820}
+            height={525}
+            src="/images/promotion_slide4.jpg"
+            alt="이미지"
+          />
+          <Btn className="btn">자세히 보기</Btn>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            width={820}
+            height={525}
+            src="/images/promotion_slide5.jpg"
+            alt="이미지"
+          />
+          <Btn className="btn">자세히 보기</Btn>
         </SwiperSlide>
       </Swiper>
-      {/* <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./images/promotion_slide1.jpg" alt="이미지" />
-            <a href="javsacript:void(0)" class="btn">
-              자세히 보기
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/promotion_slide2.jpg" alt="이미지" />
-            <a href="javsacript:void(0)" class="btn">
-              자세히 보기
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/promotion_slide3.jpg" alt="이미지" />
-            <a href="javsacript:void(0)" class="btn">
-              자세히 보기
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/promotion_slide4.jpg" alt="이미지" />
-            <a href="javsacript:void(0)" class="btn">
-              자세히 보기
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/promotion_slide5.jpg" alt="이미지" />
-            <a href="javsacript:void(0)" class="btn">
-              자세히 보기
-            </a>
-          </div>
+      <div className="swiper-pagination" ref={paginationRef}></div>
+      <div
+        className="swiper-prev"
+        onClick={() => swiperRef.current?.slidePrev()}
+      >
+        <div className="material-icons">
+          <SvgIcon component={ArrowBackIcon} inheritViewBox />
         </div>
-      </div> */}
-      {/* <div class="swiper-pagination"></div>
-      <div class="swiper-prev">
-        <div class="material-icons">arrow_back</div>
       </div>
-      <div class="swiper-next">
-        <div class="material-icons">arrow_forward</div>
-      </div> */}
+      <div
+        className="swiper-next"
+        onClick={() => swiperRef.current?.slideNext()}
+      >
+        <div className="material-icons">
+          <SvgIcon component={ArrowForwardIcon} inheritViewBox />
+        </div>
+      </div>
     </PromotionContainer>
   )
 }

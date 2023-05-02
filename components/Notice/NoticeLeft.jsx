@@ -1,8 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Swiper, SwiperSlide } from 'swiper/react'
 import { SvgIcon } from '@mui/material'
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay } from 'swiper'
 
 const NoticeLeftContainer = styled.div`
   width: 60%;
@@ -51,8 +55,13 @@ export default function NoticeLeft() {
       <Swiper
         style={{ height: '40px', margin: 0 }}
         direction={'vertical'}
-        loop={true}
-        autoplay={{ delay: 3000 }} // 추가
+        slidesPerView={1}
+        spaceBetween={30}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay]}
       >
         <SwiperSlide>
           <a>크리스마스 & 연말연시 스타벅스 매장 영업시간 변경 안내</a>

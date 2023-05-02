@@ -14,6 +14,7 @@ https://limhoooo-starbuxts.netlify.app<br/>
 - Styled-componenet<br>
 - Gsap<br>
 - Lodash<br>
+- Swiper (v9.0.0)
 - Material Icons<br>
 - React-youtube<br>
 - Netlify <br>
