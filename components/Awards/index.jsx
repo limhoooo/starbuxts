@@ -77,7 +77,7 @@ export default function Awards() {
           style={{ height: '100%' }}
         >
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((index) => (
-            <SwiperSlide>
+            <SwiperSlide key={index}>
               <Image
                 width={192}
                 height={40}

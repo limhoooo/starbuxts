@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { Inner } from '../UI/Inner'
 import Image from 'next/image'
 import { Btn } from '../UI/Btn'
+import useScrollSpy from '../../hooks/useScrollSpy'
 
 const ReserveCoffeeContainer = styled.section`
   background-image: url('../images/reserve_bg.jpg');
@@ -23,8 +24,13 @@ const Product = styled.div`
   right: 0;
 `
 export default function ReserveCoffee() {
+  const ReserveCoffeeRef = useRef()
+
+  useEffect(() => {
+    useScrollSpy(ReserveCoffeeRef.current)
+  }, [])
   return (
-    <ReserveCoffeeContainer>
+    <ReserveCoffeeContainer ref={ReserveCoffeeRef}>
       <Inner height={'400px'}>
         <ReserveLog>
           <Image
@@ -32,6 +38,7 @@ export default function ReserveCoffee() {
             alt="reserve_logo"
             width={152}
             height={186}
+            className="back-to-possition to-right delay-0"
           />
         </ReserveLog>
         <TextGroup>
@@ -40,8 +47,9 @@ export default function ReserveCoffee() {
             alt="reserve_text"
             width={450}
             height={120}
+            className="back-to-possition to-right delay-1"
           />
-          <Btn color="#D9AA8A">
+          <Btn color="#D9AA8A" className="back-to-possition to-right delay-2">
             <a>자세히 보기</a>
           </Btn>
         </TextGroup>
@@ -51,6 +59,7 @@ export default function ReserveCoffee() {
             alt="reserve_image"
             width={444}
             height={420}
+            className="back-to-possition to-left delay-3"
           />
         </Product>
       </Inner>

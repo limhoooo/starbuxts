@@ -8,6 +8,7 @@ import { useEffect } from 'react'
 import { useRef } from 'react'
 import { useState } from 'react'
 import { useCallback } from 'react'
+import useFloating from '../../hooks/useFloating'
 
 const SeasonProduct = styled.section`
   background-image: url('../images/season_product_bg.jpg');
@@ -48,10 +49,13 @@ const Event4 = styled.div`
 `
 export default function SeasonProject() {
   const seasonProductRef = useRef(null)
+  const floatingRef3 = useRef(null)
   const [isEvent1, setIsEvent1] = useState(false)
   const [isEvent2, setIsEvent2] = useState(false)
   const [isEvent3, setIsEvent3] = useState(false)
   const [isEvent4, setIsEvent4] = useState(false)
+
+  useFloating(floatingRef3, 1.5, 30)
 
   const handleScroll = useCallback(
     _.throttle(() => {
@@ -80,6 +84,7 @@ export default function SeasonProject() {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [handleScroll])
+
   return (
     <SeasonProduct ref={seasonProductRef}>
       <Inner height={'400px'}>
@@ -89,6 +94,7 @@ export default function SeasonProject() {
             alt="floating3"
             width={321}
             height={324}
+            ref={floatingRef3}
           />
         </Floating>
         <Event1 isEvent={isEvent1}>

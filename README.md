@@ -13,6 +13,7 @@ https://limhoooo-starbuxts.netlify.app<br/>
 - Next.js
 - Styled-componenet<br>
 - Gsap<br>
+- scrollmagic<br>
 - Lodash<br>
 - Swiper (v9.0.0)
 - Material Icons<br>

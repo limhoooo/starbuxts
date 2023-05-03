@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Inner } from '../UI/Inner'
 import Image from 'next/image'
 import { Btn } from '../UI/Btn'
 import styled from 'styled-components'
+import useScrollSpy from './../../hooks/useScrollSpy'
 
 const FavoriteContainer = styled.section`
   background-image: url('../images/favorite_bg.jpg');
@@ -29,8 +30,12 @@ const TextGroup = styled.div`
 `
 
 export default function Favorite() {
+  const FavoriteRef = useRef()
+  useEffect(() => {
+    useScrollSpy(FavoriteRef.current)
+  }, [])
   return (
-    <FavoriteContainer>
+    <FavoriteContainer ref={FavoriteRef}>
       <InnerBox>
         <TextGroup>
           <Image
@@ -38,14 +43,16 @@ export default function Favorite() {
             alt="favorite_text1"
             width={258}
             height={204}
+            className="back-to-possition to-right delay-0"
           />
           <Image
             src="/images/favorite_text2.png"
             alt="favorite_text2"
             width={362}
             height={156}
+            className="back-to-possition to-right delay-1"
           />
-          <Btn color="#fff">
+          <Btn color="#fff" className="back-to-possition to-right delay-2">
             <a>자세히 보기</a>
           </Btn>
         </TextGroup>

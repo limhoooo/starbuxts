@@ -1,8 +1,9 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { Inner } from '../UI/Inner'
 import VideoPlayer from './VideoPlayer'
+import useFloating from '../../hooks/useFloating'
 
 const YoutubeContainer = styled.section`
   position: relative;
@@ -41,6 +42,10 @@ const Floating = styled.div`
   left: ${({ left }) => `${left}px` || '0px'};
 `
 export default function YoutubeComponent() {
+  const floatingRef1 = useRef(null)
+  const floatingRef2 = useRef(null)
+  useFloating(floatingRef1, 3, 15)
+  useFloating(floatingRef2, 0.5, 15)
   return (
     <YoutubeContainer>
       <YoutubeArea>
@@ -54,14 +59,16 @@ export default function YoutubeComponent() {
             alt="floating1"
             width={285}
             height={285}
+            ref={floatingRef1}
           />
         </Floating>
         <Floating top={350} left={150}>
           <Image
             src="/images/floating2.png"
             alt="floating2"
-            width={285}
-            height={285}
+            width={216}
+            height={216}
+            ref={floatingRef2}
           />
         </Floating>
       </Inner>

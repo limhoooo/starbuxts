@@ -1,8 +1,9 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Btn } from '../UI/Btn'
 import styled from 'styled-components'
 import { Inner } from '../UI/Inner'
+import useScrollSpy from '../../hooks/useScrollSpy'
 const FindStoreContainer = styled.section`
   background-image: url('../images/find_store_bg.jpg');
 
@@ -41,8 +42,13 @@ const TextGroup = styled.div`
 `
 
 export default function FindStore() {
+  const FindStoreRef = useRef()
+
+  useEffect(() => {
+    useScrollSpy(FindStoreRef.current)
+  }, [])
   return (
-    <FindStoreContainer>
+    <FindStoreContainer ref={FindStoreRef}>
       <Inner height={'400px'}>
         <Image
           src="/images/find_store_texture1.png"
@@ -61,14 +67,14 @@ export default function FindStore() {
         <Image
           src="/images/find_store_picture1.jpg"
           alt="find_store_texture3"
-          className="picture picture1"
+          className="picture picture1 back-to-possition to-right delay-0"
           width={350}
           height={350}
         />
         <Image
           src="/images/find_store_picture2.jpg"
           alt="find_store_texture4"
-          className="picture picture2"
+          className="picture picture2 back-to-possition to-right delay-1"
           width={216}
           height={216}
         />
@@ -79,14 +85,16 @@ export default function FindStore() {
             alt="find_store_text1"
             width={385}
             height={54}
+            className="back-to-possition to-left delay-0"
           />
           <Image
             src="/images/find_store_text2.png"
             alt="find_store_text2"
             width={366}
             height={61}
+            className="back-to-possition to-left delay-1"
           />
-          <Btn>
+          <Btn className="back-to-possition to-left delay-2">
             <a>매장찾기</a>
           </Btn>
         </TextGroup>

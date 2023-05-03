@@ -18,6 +18,7 @@
     "react-dom": "18.2.0",
     "react-gsap": "^3.2.1",
     "react-youtube": "^10.1.0",
+    "scrollmagic": "^2.0.8",
     "styled-components": "^5.3.10",
     "swiper": "9.0.0"
   }
