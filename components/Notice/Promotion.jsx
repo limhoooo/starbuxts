@@ -7,7 +7,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import { FreeMode, Pagination, Navigation } from 'swiper'
+import { FreeMode, Navigation } from 'swiper'
 import Image from 'next/image'
 import { Btn } from '../UI/Btn'
 import { SvgIcon } from '@mui/material'
@@ -104,29 +104,18 @@ const PromotionContainer = styled.div`
 
 export default function Promotion({ isToggle }) {
   const swiperRef = useRef()
-  const navigationPrevRef = useRef(null)
-  const navigationNextRef = useRef(null)
-  const paginationRef = useRef(null)
   return (
     <PromotionContainer isToggle={isToggle}>
       <Swiper
         freeMode={true}
         slidesPerView={3}
         spaceBetween={30}
-        pagination={{
-          el: '.promotion .swiper-pagination',
-          clickable: true,
-        }}
         centeredSlides={true}
         loop={true}
-        navigation={{
-          prevEl: navigationPrevRef.current,
-          nextEl: navigationNextRef.current,
-        }}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper
         }}
-        modules={[FreeMode, Pagination, Navigation]}
+        modules={[FreeMode, Navigation]}
         style={{ height: '100%' }}
       >
         <SwiperSlide>
@@ -175,7 +164,6 @@ export default function Promotion({ isToggle }) {
           <Btn className="btn">자세히 보기</Btn>
         </SwiperSlide>
       </Swiper>
-      <div className="swiper-pagination" ref={paginationRef}></div>
       <div
         className="swiper-prev"
         onClick={() => swiperRef.current?.slidePrev()}
