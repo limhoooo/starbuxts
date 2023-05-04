@@ -38,10 +38,10 @@ export default function Badges() {
   return (
     <BadgesContainer isBadge={isBadge}>
       <Badge>
-        <Image src="/images/badge1.jpg" alt="Badge" width={130} height={230} />
+        <img src="/images/badge1.jpg" alt="Badge" width={130} height={230} />
       </Badge>
       <Badge>
-        <Image src="/images/badge2.jpg" alt="Badge" width={130} height={86} />
+        <img src="/images/badge2.jpg" alt="Badge" width={130} height={86} />
       </Badge>
     </BadgesContainer>
   )

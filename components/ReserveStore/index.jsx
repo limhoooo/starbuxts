@@ -56,7 +56,7 @@ export default function ReserveStore() {
       <Inner height={'600px'}>
         <Medal>
           <Front className="front">
-            <Image
+            <img
               src="/images/reserve_store_medal_front.png"
               alt="reserve_store_medal_front"
               width={334}
@@ -64,7 +64,7 @@ export default function ReserveStore() {
             />
           </Front>
           <Back className="back">
-            <Image
+            <img
               src="/images/reserve_store_medal_back.png"
               alt="reserve_store_medal_back"
               width={334}

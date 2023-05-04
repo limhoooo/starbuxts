@@ -119,7 +119,7 @@ export default function Promotion({ isToggle }) {
         style={{ height: '100%' }}
       >
         <SwiperSlide>
-          <Image
+          <img
             width={820}
             height={525}
             src="/images/promotion_slide1.jpg"
@@ -128,7 +128,7 @@ export default function Promotion({ isToggle }) {
           <Btn className="btn">자세히 보기</Btn>
         </SwiperSlide>
         <SwiperSlide>
-          <Image
+          <img
             width={820}
             height={525}
             src="/images/promotion_slide2.jpg"
@@ -137,7 +137,7 @@ export default function Promotion({ isToggle }) {
           <Btn className="btn">자세히 보기</Btn>
         </SwiperSlide>
         <SwiperSlide>
-          <Image
+          <img
             width={820}
             height={525}
             src="/images/promotion_slide3.jpg"
@@ -146,7 +146,7 @@ export default function Promotion({ isToggle }) {
           <Btn className="btn">자세히 보기</Btn>
         </SwiperSlide>
         <SwiperSlide>
-          <Image
+          <img
             width={820}
             height={525}
             src="/images/promotion_slide4.jpg"
@@ -155,7 +155,7 @@ export default function Promotion({ isToggle }) {
           <Btn className="btn">자세히 보기</Btn>
         </SwiperSlide>
         <SwiperSlide>
-          <Image
+          <img
             width={820}
             height={525}
             src="/images/promotion_slide5.jpg"

@@ -55,8 +55,7 @@ export default function Search() {
         id="searchInput"
       />
       <SearchIcon onClick={isClickShow} isClick={isClick}>
-        <Image
-          priority
+        <img
           src="/images/search-icon.png"
           width={18}
           height={18}

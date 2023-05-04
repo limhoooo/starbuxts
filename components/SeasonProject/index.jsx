@@ -89,7 +89,7 @@ export default function SeasonProject() {
     <SeasonProduct ref={seasonProductRef}>
       <Inner height={'400px'}>
         <Floating top={-200} right={0}>
-          <Image
+          <img
             src="/images/floating3.png"
             alt="floating3"
             width={321}
@@ -98,7 +98,7 @@ export default function SeasonProject() {
           />
         </Floating>
         <Event1 isEvent={isEvent1}>
-          <Image
+          <img
             src="/images/season_product_image.png"
             alt="season_product_image"
             width={493}
@@ -108,7 +108,7 @@ export default function SeasonProject() {
 
         <TextGroup>
           <Event2 isEvent={isEvent2}>
-            <Image
+            <img
               src="/images/season_product_text1.png"
               alt="title1"
               width={262}
@@ -116,7 +116,7 @@ export default function SeasonProject() {
             />
           </Event2>
           <Event3 isEvent={isEvent3}>
-            <Image
+            <img
               src="/images/season_product_text2.png"
               alt="dec"
               width={488}

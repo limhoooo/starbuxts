@@ -33,7 +33,7 @@ export default function Visual() {
       <Inner height={'646px'}>
         <FideIn ref={visualTitle}>
           <PositionAbsolute top={'88px'} left={'-10px'}>
-            <Image
+            <img
               src="/images/visual_title.png"
               alt="STARBUCKS DELIGFTFUL START TO THE YEAR"
               width={470}
@@ -49,7 +49,7 @@ export default function Visual() {
 
         <FideIn ref={visualCup1}>
           <PositionAbsolute bottom={'0'} right={'-47px'}>
-            <Image
+            <img
               src="/images/visual_cup1.png"
               alt="오트밀 라떼"
               width={279}
@@ -57,7 +57,7 @@ export default function Visual() {
             />
           </PositionAbsolute>
           <PositionAbsolute top={'38px'} right={'171px'}>
-            <Image
+            <img
               src="/images/visual_cup1_text.png"
               alt="오트밀 라떼"
               width={179}
@@ -67,7 +67,7 @@ export default function Visual() {
         </FideIn>
         <FideIn ref={visualCup2}>
           <PositionAbsolute bottom={'0'} right={'162px'}>
-            <Image
+            <img
               src="/images/visual_cup2.png"
               alt="카라멜모카"
               width={280}
@@ -77,7 +77,7 @@ export default function Visual() {
         </FideIn>
         <FideIn ref={visualCup3}>
           <PositionAbsolute top={'321px'} right={'416px'}>
-            <Image
+            <img
               src="/images/visual_cup2_text.png"
               alt="카라멜모카"
               width={254}
@@ -85,7 +85,7 @@ export default function Visual() {
             />
           </PositionAbsolute>
           <PositionAbsolute bottom={'0'} left={'275px'}>
-            <Image
+            <img
               src="/images/visual_spoon.png"
               alt="spoon"
               width={413}

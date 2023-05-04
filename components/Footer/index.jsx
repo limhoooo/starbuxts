@@ -116,7 +116,7 @@ export default function Footer() {
           </a>
         </Copyright>
         <Logo>
-          <Image
+          <img
             src="/images/starbucks_logo_only_text.png"
             alt="STAR BUCKS"
             width={142}
