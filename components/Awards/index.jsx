@@ -78,7 +78,7 @@ export default function Awards() {
         >
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((index) => (
             <SwiperSlide key={index}>
-              <img
+              <Image
                 width={192}
                 height={40}
                 src={`/images/awards_slide${index}.jpg`}

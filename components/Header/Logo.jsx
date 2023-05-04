@@ -14,7 +14,8 @@ const LogoContainer = styled.a.attrs({
 export default function Logo() {
   return (
     <LogoContainer href="/">
-      <img
+      <Image
+        priority
         src="/images/starbucks_logo.png"
         width={75}
         height={75}

@@ -33,7 +33,7 @@ export default function ReserveCoffee() {
     <ReserveCoffeeContainer ref={ReserveCoffeeRef}>
       <Inner height={'400px'}>
         <ReserveLog>
-          <img
+          <Image
             src="/images/reserve_logo.png"
             alt="reserve_logo"
             width={152}
@@ -42,7 +42,7 @@ export default function ReserveCoffee() {
           />
         </ReserveLog>
         <TextGroup>
-          <img
+          <Image
             src="/images/reserve_text.png"
             alt="reserve_text"
             width={450}
@@ -54,7 +54,7 @@ export default function ReserveCoffee() {
           </Btn>
         </TextGroup>
         <Product>
-          <img
+          <Image
             src="/images/reserve_image.png"
             alt="reserve_image"
             width={444}

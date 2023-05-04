@@ -50,28 +50,28 @@ export default function FindStore() {
   return (
     <FindStoreContainer ref={FindStoreRef}>
       <Inner height={'400px'}>
-        <img
+        <Image
           src="/images/find_store_texture1.png"
           alt="find_store_texture1"
           className="texture1"
           width={343}
           height={92}
         />
-        <img
+        <Image
           src="/images/find_store_texture2.png"
           alt="find_store_texture2"
           className="texture2"
           width={230}
           height={102}
         />
-        <img
+        <Image
           src="/images/find_store_picture1.jpg"
           alt="find_store_texture3"
           className="picture picture1 back-to-possition to-right delay-0"
           width={350}
           height={350}
         />
-        <img
+        <Image
           src="/images/find_store_picture2.jpg"
           alt="find_store_texture4"
           className="picture picture2 back-to-possition to-right delay-1"
@@ -80,14 +80,14 @@ export default function FindStore() {
         />
 
         <TextGroup>
-          <img
+          <Image
             src="/images/find_store_text1.png"
             alt="find_store_text1"
             width={385}
             height={54}
             className="back-to-possition to-left delay-0"
           />
-          <img
+          <Image
             src="/images/find_store_text2.png"
             alt="find_store_text2"
             width={366}

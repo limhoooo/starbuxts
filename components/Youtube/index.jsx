@@ -54,7 +54,7 @@ export default function YoutubeComponent() {
       <YoutubeCover />
       <Inner height={700}>
         <Floating top={50}>
-          <img
+          <Image
             src="/images/floating1.png"
             alt="floating1"
             width={285}
@@ -63,7 +63,7 @@ export default function YoutubeComponent() {
           />
         </Floating>
         <Floating top={350} left={150}>
-          <img
+          <Image
             src="/images/floating2.png"
             alt="floating2"
             width={216}

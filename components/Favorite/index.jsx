@@ -38,14 +38,14 @@ export default function Favorite() {
     <FavoriteContainer ref={FavoriteRef}>
       <InnerBox>
         <TextGroup>
-          <img
+          <Image
             src="/images/favorite_text1.png"
             alt="favorite_text1"
             width={258}
             height={204}
             className="back-to-possition to-right delay-0"
           />
-          <img
+          <Image
             src="/images/favorite_text2.png"
             alt="favorite_text2"
             width={362}
