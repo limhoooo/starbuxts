@@ -7,7 +7,9 @@ next.js 와 styled-compoenet 를 이용한 인터렉티브 마이그레이션 �
 
 https://limhoooo-starbuxts.netlify.app<br/>
 
-![스타벅스](https://github.com/limhoooo/starbuxts-next/assets/24869943/0b225be4-566c-4c9a-a59b-0e0a89c1ce34)
+![ezgif com-video-to-gif (2)](https://github.com/limhoooo/starbuxts-next/assets/24869943/3ca5779e-7423-4593-9e8c-cba75671a32b)
+
+
 
 ## 사용기술
 
